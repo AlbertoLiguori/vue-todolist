@@ -40,23 +40,22 @@
 
                             <ul>
 
-                                  <!-- <li @click="changeColor()" v-bind:class="actualColor" v-for="(element, index) in todoArray"> -->
-                                      <li v-for="(element, index) in todoArray">
+                                <li v-for="(element, index) in todoArray">
 
-                                        <div class="row">
+                                     <div class="row">
 
-                                              <div @click="changeColor(index)" v-bind:class="element.backgroundColor" class="col-10">
-                                                {{element.todoText}}
-                                              </div>
+                                          <div @click="changeColor(index)" v-bind:class="element.backgroundColor" class="col-10">
+                                              {{element.todoText}}
+                                          </div>
 
-                                              <div class="col-2">
-                                                  <!-- <button @click="(removeTodo(index,1))" type="button" name="button">X</button> -->
-                                                    <button  @click="(removeTodo(index,1))" type="button" name="button">X</button>
+                                          <div class="col-2">
 
-                                              </div>
+                                                <button  @click="(removeTodo(index,1))" type="button" name="button">X</button>
 
-                                        </div>
-                                  </li>
+                                          </div>
+
+                                      </div>
+                                </li>
 
                             </ul>
                         </div>
