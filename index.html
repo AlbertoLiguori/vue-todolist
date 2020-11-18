@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+        <!-- LINK TO FONTAWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+        <!-- LINK BOOTSTRAP -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- LINK TO MY CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- LINK TO JQUERY -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+        <!-- LINK TO VUE -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+        <!-- LINK TO JS FUNCTIONS -->
+        <script src="functions.js" charset="utf-8"></script>
+
+        <title>New Project</title>
+    </head>
+    <body>
+
+          <div id="root">
+
+              <div class="container">
+
+                    <div class="row">
+
+                        <div class="col">
+
+                            <h1>To Do List</h1>
+                            <input id="inputField" type="text" name="" value="" v-model="newTodo">
+                            <button id="inputButton" @click="(getInput())" type="button" name="button" >Aggiungi</button>
+
+                            <ul>
+
+                                  <li v-for="(element, index) in todoArray">
+                                        <div class="row">
+
+                                              <div class="col-10">
+                                                {{element}}
+                                              </div>
+
+                                              <div class="col-2">
+                                                  <button @click="(removeTodo(index,1))" type="button" name="button">X</button>
+                                              </div>
+
+                                        </div>
+                                  </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+              </div>
+
+          </div>
+
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
