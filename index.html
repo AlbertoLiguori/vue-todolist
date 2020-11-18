@@ -35,20 +35,24 @@
                         <div class="col">
 
                             <h1>To Do List</h1>
-                            <input id="inputField" type="text" name="" value="" v-model="newTodo">
-                            <button id="inputButton" @click="(getInput())" type="button" name="button" >Aggiungi</button>
+                            <input id="inputField" type="text" name="" value="" v-model="inputText">
+                            <button @click="addTodo()" id="inputButton" type="button" name="button" >Aggiungi</button>
 
                             <ul>
 
-                                  <li v-for="(element, index) in todoArray">
+                                  <!-- <li @click="changeColor()" v-bind:class="actualColor" v-for="(element, index) in todoArray"> -->
+                                      <li @click="changeColor(index)" v-bind:class="element.backgroundColor" v-for="(element, index) in todoArray">
+
                                         <div class="row">
 
                                               <div class="col-10">
-                                                {{element}}
+                                                {{element.todoText}}
                                               </div>
 
                                               <div class="col-2">
-                                                  <button @click="(removeTodo(index,1))" type="button" name="button">X</button>
+                                                  <!-- <button @click="(removeTodo(index,1))" type="button" name="button">X</button> -->
+                                                    <button  @click="(removeTodo(index,1))" type="button" name="button">X</button>
+
                                               </div>
 
                                         </div>
