@@ -1,7 +1,6 @@
 const myApp = new Vue({
 
-
-  el:("#root"),
+    el:("#root"),
 
     data:{
 
@@ -38,11 +37,7 @@ const myApp = new Vue({
         };
       },
 
-
-
     }
-
-
 
 })
 

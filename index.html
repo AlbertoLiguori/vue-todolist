@@ -41,11 +41,11 @@
                             <ul>
 
                                   <!-- <li @click="changeColor()" v-bind:class="actualColor" v-for="(element, index) in todoArray"> -->
-                                      <li @click="changeColor(index)" v-bind:class="element.backgroundColor" v-for="(element, index) in todoArray">
+                                      <li v-for="(element, index) in todoArray">
 
                                         <div class="row">
 
-                                              <div class="col-10">
+                                              <div @click="changeColor(index)" v-bind:class="element.backgroundColor" class="col-10">
                                                 {{element.todoText}}
                                               </div>
 
